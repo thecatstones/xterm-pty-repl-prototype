@@ -2,8 +2,8 @@
 Make sure that you have npm and Node.js installed, then run `npm i` to install dependencies.
 
 ## Usage
-Run `node express.js` to initiate server on port 3000. Navigate to `localhost:3000/<shell_command>`.
-The shell command can be ANYTHING, such as `irb`, `node`, `python`, or even `bash`.
+Run `node express.js` to initiate server on port 3000. Navigate to `localhost:3000/<language>`.
+The language path can be any supported language, currently `ruby` and `javascript` are supported, as long as they are installed in your system.
 After the terminal UI loads, start typing.
 
 Supported:
