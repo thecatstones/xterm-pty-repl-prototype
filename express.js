@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const http = require('http');
 const path = require('path');
 const Repl = require('./repl_pty.js');
+const LANG_REPL = require('./lang_repl.js');
 
 const app = express();
 let repl = null;
@@ -12,7 +13,10 @@ app.use(express.static('public'));
 
 app.get('/:lang', (req, res) => {
   console.log('LANG', req.params);
-  repl = Repl.new(req.params.lang);
+  const exec_command = LANG_REPL[req.params.lang];
+
+  if (!exec_command) return;
+  repl = Repl.new(exec_command);
   res.sendFile(path.join(__dirname, './index.html'));
 });
 

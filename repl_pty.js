@@ -1,13 +1,12 @@
-var os = require('os');
-var pty = require('node-pty');
+const pty = require('node-pty');
 
 const Repl = {
-  new(lang) {
-    return Object.create(this.init(lang));
+  new(exec_command) {
+    return Object.create(this.init(exec_command));
   },
 
-  init(lang) {
-    this.process = pty.spawn(lang);
+  init(exec_command) {
+    this.process = pty.spawn(exec_command);
     return this;
   },
 

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       term.write(data);
       state.line = '';
-    });  
+    });
   }
 
   const handleBackspaceReleased = () => {
