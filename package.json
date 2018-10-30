@@ -4,7 +4,8 @@
   "description": "a simple repl prototype using HTTP rest/WebSockets",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node express.js"
   },
   "repository": {
     "type": "git",
